@@ -1,0 +1,18 @@
+{
+  "name": "simple-dependencies",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "prepare": "yarn workspace package-a install && yarn workspace package-b install",
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "package-a": "1.0.0"
+  },
+  "workspaces": [
+    "./package-a",
+    "./package-b"
+  ]
+}
