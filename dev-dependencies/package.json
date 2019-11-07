@@ -1,0 +1,17 @@
+{
+  "name": "simple-dependencies",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "prepare": "yarn --cwd package-a && yarn --cwd package-b",
+    "start": "node index.js",
+    "clean": "rm -rf node_modules ./package-a/node_modules ./package-b/node_modules"
+  },
+  "devDependencies": {
+    "package-a": "link:./package-a/",
+    "package-b": "link:./package-b/",
+    "ramda": "^0.26.1"
+  }
+}
