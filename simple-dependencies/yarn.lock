@@ -9,6 +9,14 @@
   dependencies:
     regenerator-runtime "^0.13.2"
 
+"package-a@link:./package-a":
+  version "0.0.0"
+  uid ""
+
+"package-b@link:./package-b":
+  version "0.0.0"
+  uid ""
+
 pneumatic-pipelines@1.5.0:
   version "1.5.0"
   resolved "https://registry.yarnpkg.com/pneumatic-pipelines/-/pneumatic-pipelines-1.5.0.tgz#1bc0acdb04d997682849c5892731d06652cc7cfc"

@@ -5,14 +5,13 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "prepare": "yarn workspace package-a install && yarn workspace package-b install",
-    "start": "node index.js"
+    "prepare": "yarn --cwd package-a && yarn --cwd package-b",
+    "start": "node index.js",
+    "clean": "rm -rf node_modules pacakge-a/node_modules ./pacakge-b/node_modules"
   },
   "dependencies": {
-    "package-a": "1.0.0"
-  },
-  "workspaces": [
-    "./package-a",
-    "./package-b"
-  ]
+    "package-a": "link:./package-a/",
+    "package-b": "link:./package-b/",
+    "ramda": "^0.26.1"
+  }
 }
